@@ -1,15 +1,17 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>Login Professor</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700">
+        <title>Cadastro Professor</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script> 
         <style>
             body {
@@ -91,30 +93,59 @@
                 text-align: center;
             }
         </style>
+
     </head>
     <body>
         <div class="signup-form">
-            <form action="Validar" method="POST">
-                <h2>Login</h2>
-                <p><h3>Acesso do Professor</h3></p>
-                <div style="color: red" class="erroDiv"> 
-                    ${msgErro != null ? msgErro : ''} 
 
-                </div> 
+            <c:if test="${not empty errors}">
+                <div class="alert alert-danger" role="alert">
+                    <c:forEach var="error" items="${errors}">
+                        ${error.message}<br />
+                    </c:forEach>
+                </div>
+            </c:if>
+
+            <form action="Controlador" method="POST">
+                <h2>Cadastro Professor</h2>
+                <p>Preencha os dados abaixo para criar sua conta!</p>
+               
                 <div class="form-group">
-                    <input type="email" class="form-control" name="txtemail" placeholder="Email" required="required">
+                    <input type="text" class="form-control" name="txtnome" minlength="5" maxlength="30" placeholder="Nome" required="required">
                 </div>
                 <div class="form-group">
-                    <input type="password" class="form-control" name="txtsenha" placeholder="Senha" required="required">
-                </div>       
-                <div class="form-group">
-                    <label class="form-check-label"><input type="checkbox"> Lembrar Senha</label>
+                    <input type="text" class="form-control" name="txtemail" placeholder="Email" required="required">
                 </div>
                 <div class="form-group">
-                    <button name="acao" value="Entrar" class="btn btn-primary btn-lg">Entrar</button>
+                    <input type="text" class="form-control" name="txttelefone" placeholder="Telefone" required="required">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" name="txtdisciplina" placeholder="Disciplina" required="required">
+                </div>
+                <div class="form-group">
+                    <input id="senha1" type="password" class="form-control" name="txtsenha" minlength="6" maxlength="12" placeholder="Senha" required="required">
+                </div>
+                <div class="form-group">
+                    <input id="senha2" type="password" class="form-control" name="confirme_senha" minlength="6" maxlength="12" placeholder="Confirme sua senha" required="required" oninput="validaSenha(this)">
+                </div>        
+                <div class="form-group">
+                    <label class="form-check-label"><input type="checkbox" required="required"> Aceito os <a href="#">Termos de Uso</a> E <a href="#">Política de Privacidade</a></label>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Cadastrar" class="btn btn-primary btn-lg">
                 </div>
             </form>
-            <div class="hint-text">Não tem Cadastro? <a href="cadastroprofessor.jsp"/>Crie sua conta</a></div>
+            <div class="hint-text">Se já possui conta <a href="loginprofessor.jsp">Faça Login</a></div>
         </div>
     </body>
 </html>
+
+<script>
+    function validaSenha(input) {
+        if (input.value != document.getElementById('senha1').value) {
+            input.setCustomValidity('Repita a senha corretamente');
+        } else {
+            input.setCustomValidity('');
+        }
+    }
+</script>
