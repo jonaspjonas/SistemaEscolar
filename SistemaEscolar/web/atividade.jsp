@@ -8,7 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <script src="https://kit.fontawesome.com/66ad9b4f46.js" crossorigin="anonymous"></script>
-        <title>Atividade</title>
+        <title>Atividades</title>
     </head>
     <body>
         <br><br>

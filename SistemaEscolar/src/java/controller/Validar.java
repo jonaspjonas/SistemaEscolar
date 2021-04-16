@@ -50,7 +50,6 @@ public class Validar extends HttpServlet {
             request.getRequestDispatcher("index.jsp").forward(request, response);
         }
         if(acao.equalsIgnoreCase("cadastrar")){
-            System.out.println("chamou cadastrar atividade!!!!!!!");
             
             Atividade atv = new Atividade();
             atv.setTitulo(request.getParameter("txttitulo"));
@@ -63,7 +62,6 @@ public class Validar extends HttpServlet {
             if(atvdao != null){
                 atvdao.adicionar(atv);
             }
-            System.out.println("atividdae cadastrada!!!!!!!");
             request.getRequestDispatcher("dashboardprofessor.jsp").forward(request, response);
         }
     }

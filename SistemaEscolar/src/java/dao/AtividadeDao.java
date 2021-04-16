@@ -30,6 +30,7 @@ public class AtividadeDao {
             
             ps.executeUpdate();
         } catch (SQLException e) {
+            System.out.println(e);
             
         }
     }
