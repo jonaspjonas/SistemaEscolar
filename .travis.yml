@@ -6,9 +6,11 @@ ant test
 
 jdk:
   - openjdk8
-
-before_install:
- - chmod +x gradlew
+dist: xenial
+addons:
+  apt:
+    packages:
+      - ant
 
 
 notification:
