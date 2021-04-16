@@ -19,7 +19,7 @@
                     <div class="w3-dropdown-hover">
                         <button class="w3-button w3-blue w3-hover-white">Atividades</button>
                         <div class="w3-dropdown-content w3-bar-block w3-border">
-                            <a href="loginaluno.jsp" class="w3-bar-item w3-button w3-hover-blue">Criar</a>
+                            <a href="atividade.jsp" class="w3-bar-item w3-button w3-hover-blue" target="myFrame">Cadastrar</a>
                             <a href="loginprofessor.jsp" class="w3-bar-item w3-button w3-hover-blue">Consultar</a>
                         </div>
                     </div>
@@ -31,7 +31,6 @@
                                 <img src="img/prof.png" alt="60" width="60"/>
                             </a>
                             <a class="w3-bar-item" href="#">${professor.getEmail()}</a>
-                            <a class="w3-bar-item w3-button w3-hover-white" href="#">Editar</a>
                             <form action="Validar" method="POST">
                                 <button name="acao" value="Sair" class="dropdown-item" href="#">Sair</button>
                             </form>
@@ -39,6 +38,9 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="m-4" style="height: 830px;">
+            <iframe name="myFrame" style="height: 100%; width: 100%; border: none"></iframe>
         </div>
     </body>
 </html>
