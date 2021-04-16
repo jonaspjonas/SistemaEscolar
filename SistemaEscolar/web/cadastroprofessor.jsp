@@ -109,19 +109,31 @@
             <form action="Controlador" method="POST">
                 <h2>Cadastro Professor</h2>
                 <p>Preencha os dados abaixo para criar sua conta!</p>
-               
+
                 <div class="form-group">
                     <input type="text" class="form-control" name="txtnome" minlength="5" maxlength="30" placeholder="Nome" required="required">
                 </div>
                 <div class="form-group">
-                    <input type="text" class="form-control" name="txtemail" placeholder="Email" required="required">
+                    <input type="email" class="form-control" name="txtemail" placeholder="Email" required="required">
                 </div>
                 <div class="form-group">
                     <input type="text" class="form-control" name="txttelefone" placeholder="Telefone" required="required">
                 </div>
-                <div class="form-group">
-                    <input type="text" class="form-control" name="txtdisciplina" placeholder="Disciplina" required="required">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <label class="input-group-text" for="inputGroupSelect01">Disciplina</label>
+                    </div>
+                    <select class="custom-select" name="txtdisciplina">
+                        <option selected>Escolher...</option>
+                        <option value="Matematica">Matematica</option>
+                        <option value="Tecnologia">Tecnologia</option>
+                        <option value="Portugues">Portugues</option>
+                        <option value="Linguistica">Linguistica</option>
+                        <option value="Saude">Saude</option>
+                        <option value="Artes">Artes</option>
+                    </select>
                 </div>
+
                 <div class="form-group">
                     <input id="senha1" type="password" class="form-control" name="txtsenha" minlength="6" maxlength="12" placeholder="Senha" required="required">
                 </div>
