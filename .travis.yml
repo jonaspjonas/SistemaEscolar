@@ -3,9 +3,6 @@ language: java
 jdk:
   - openjdk8
 
-before_install:
-  - chmod
-
 notification:
   email:
     ufrapl21@gmail.com
