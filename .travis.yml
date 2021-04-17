@@ -1,0 +1,15 @@
+language: java
+
+jdk:
+  - oraclejdk8
+  - openjdk8
+
+
+notification:
+  email:
+  ufrapl21@gmail.com
+  jonaspjonas@gmail.com
+  23jhonpires23@gmail.com
+  rafaelestevess@gmail.com
+  lusouzarosario@gmail.com
+  rodnets4@gmail.com
