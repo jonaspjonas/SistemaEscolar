@@ -3,6 +3,7 @@ language:
   
  jdk:
   - oraclejdk8
+  
 notification:
   e-mail:
     ufrapl21@gmail.com
