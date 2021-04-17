@@ -3,7 +3,7 @@ language: java
  jdk:
   - openjdk8
   
-notification:
+notifications:
   email: ufrapl21@gmail.com
          jonaspjonas@gmail.com
          23jhonpires23@gmail.com
