@@ -5,10 +5,9 @@ language:
   - openjdk8
   
 notification:
-  e-mail:
-    ufrapl21@gmail.com
-    jonaspjonas@gmail.com
-    23jhonpires23@gmail.com
-    rafaelestevess@gmail.com
-    lusouzarosario@gmail.com
-    rodnets4@gmail.com
+  email: ufrapl21@gmail.com
+         jonaspjonas@gmail.com
+         23jhonpires23@gmail.com
+         rafaelestevess@gmail.com
+         lusouzarosario@gmail.com
+         rodnets4@gmail.com
